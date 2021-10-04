@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="Gradle: org.jetbrains.anko:supportV4-base:0.10.8@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/406b7ceec2269dcbde4798ae0c16b998/jetified-supportV4-base-0.10.8/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d17f9df6c4988060c355fb53776a2f7d/jetified-supportV4-base-0.10.8/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bec9dd057ad7663154d2b804bee9f343/jetified-supportV4-base-0.10.8/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/21c295fbc0ba0714e198176720b3994a/transformed/jetified-supportV4-base-0.10.8/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/e969b07640fff23539f6262efd920287/transformed/jetified-supportV4-base-0.10.8/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7abffa294f216621eb7f4acabc0898c5/jetified-supportV4-base-0.10.8/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7abffa294f216621eb7f4acabc0898c5/jetified-supportV4-base-0.10.8/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7abffa294f216621eb7f4acabc0898c5/jetified-supportV4-base-0.10.8/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.anko/supportV4-base/0.10.8/7b9ca94d2ea897c899316add19f15592a53b526e/supportV4-base-0.10.8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

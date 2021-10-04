@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="Gradle: org.jetbrains.anko:anko-appcompat-v7-commons:0.10.8@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1fd65932cd88038e2e54b5cdf04ef7f3/anko-appcompat-v7-commons-0.10.8/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5d34c7915e60ea3885cbda8ce547edda/jetified-anko-appcompat-v7-commons-0.10.8/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a7d6488a93df1839b994f907e5c29de9/jetified-anko-appcompat-v7-commons-0.10.8/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8e6b3fc447665d68d6f1b80b1738f9ea/transformed/jetified-anko-appcompat-v7-commons-0.10.8/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/5ed514a9bccdf0b425349074d36c15d9/transformed/jetified-anko-appcompat-v7-commons-0.10.8/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a7d6488a93df1839b994f907e5c29de9/jetified-anko-appcompat-v7-commons-0.10.8/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a7d6488a93df1839b994f907e5c29de9/jetified-anko-appcompat-v7-commons-0.10.8/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.anko/anko-appcompat-v7-commons/0.10.8/3ae43f5caa019f634249ee004aa89704c2998e7e/anko-appcompat-v7-commons-0.10.8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

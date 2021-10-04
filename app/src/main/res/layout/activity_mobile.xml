@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.mobile.MobileActivity">
+
+    <include layout="@layout/app_custom_tool_bar_filter" />
+
+    <EditText
+        android:id="@+id/etERNNUmber"
+        android:layout_width="0dp"
+        android:layout_height="43dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="10dp"
+        android:animateLayoutChanges="@bool/show"
+        android:background="@drawable/rounded_corners_app_grey_edittext_bg"
+        android:drawablePadding="@dimen/margin5x2"
+        android:fontFamily="@font/roboto_regular"
+        android:hint="@string/mobile_number"
+        android:inputType="textCapCharacters"
+        android:paddingStart="@dimen/padding3x4"
+        android:paddingEnd="@dimen/padding3x4"
+        android:singleLine="@bool/show"
+        android:textColor="@color/pink"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UnusedAttribute" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

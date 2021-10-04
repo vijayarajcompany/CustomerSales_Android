@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/shadow_toolbar_2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="3dp">
+
+            <RelativeLayout
+                android:id="@+id/fl_left_img_container_search"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+
+                <ImageView
+                    android:id="@+id/iv_tool_left_back_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium_2"
+                    android:layout_marginStart="@dimen/margin_medium_2"
+                    android:src="@drawable/left_arrow"
+                    tools:ignore="ContentDescription"
+                    app:tint="@color/pink" />
+                <TextView
+                    android:layout_toRightOf="@id/iv_tool_left_back_button"
+                    android:id="@+id/tv_back"
+                    android:layout_marginStart="5dp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/roboto_regular"
+                    android:gravity="center_horizontal"
+                    android:maxLines="2"
+                    android:text="@string/back"
+                    android:textColor="@color/pink"
+                    android:textSize="17sp" />
+
+            </RelativeLayout>
+
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/sv_product"
+                android:layout_toRightOf="@id/fl_left_img_container_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+
+                app:iconifiedByDefault="false"
+                app:queryHint="@string/search_hint" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</FrameLayout>

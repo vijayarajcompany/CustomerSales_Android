@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/divider">
+    <include layout="@layout/app_custom_tool_bar_filter"/>
+    <ScrollView
+        android:layout_marginBottom="56dp"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_marginTop="56dp"
+
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.place_order.PlaceOrderActivity">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/llAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+
+                <TextView
+                    android:id="@+id/tvAddressLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/delivery_address"
+                    android:textAllCaps="false"
+                    android:textColor="@color/grey_6"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    />
+
+                <TextView
+                    android:id="@+id/tvAddressValue1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/delivery_address"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvAddressLabel"
+
+                    />
+
+                <EditText
+                    android:id="@+id/etaddress2"
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:layout_marginEnd="10dp"
+                    android:animateLayoutChanges="@bool/show"
+                    android:fontFamily="@font/roboto_regular"
+                    android:hint="@string/other_addresses"
+                    android:paddingStart="5dp"
+                    android:focusable="true"
+                    android:paddingEnd="@dimen/padding3x4"
+                    android:singleLine="@bool/show"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:lines="1"
+                    tools:ignore="UnusedAttribute" />
+
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="10dp"
+            android:id="@+id/llMobileNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/llAddress"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+
+                <TextView
+                    android:id="@+id/tvMobileLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/mobile_number"
+                    android:textAllCaps="false"
+                    android:textColor="@color/grey_6"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    />
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp">
+                <EditText
+                    android:id="@+id/etMobileNUmberCountryCode"
+                    android:layout_width="80dp"
+                    android:layout_height="43dp"
+                    android:layout_gravity="center"
+                    android:animateLayoutChanges="@bool/show"
+                    android:background="@drawable/rounded_corners_app_grey_edittext_bg"
+                    android:fontFamily="@font/roboto_regular"
+                    android:hint="@string/code"
+                    android:inputType="number"
+                    android:paddingStart="@dimen/padding3x4"
+                    android:paddingEnd="@dimen/padding3x4"
+                    android:singleLine="@bool/show"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="UnusedAttribute" />
+
+                <EditText
+                    android:id="@+id/etMobileNUmber"
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:layout_gravity="center"
+                    android:animateLayoutChanges="@bool/show"
+                    android:background="@drawable/rounded_corners_app_grey_edittext_bg"
+                    android:fontFamily="@font/roboto_regular"
+                    android:hint="@string/mobile_number"
+                    android:inputType="number"
+                    android:paddingStart="@dimen/padding3x4"
+                    android:paddingEnd="@dimen/padding3x4"
+                    android:singleLine="@bool/show"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="UnusedAttribute" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="10dp"
+            android:id="@+id/llAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/llMobileNumber"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+
+                <TextView
+                    android:id="@+id/tvAmountLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/amount_details"
+                    android:textAllCaps="false"
+                    android:textColor="@color/grey_6"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+
+                    />
+
+                <RelativeLayout
+                    android:background="@drawable/rounded_corners_app_grey_white_edittext_bg"
+                    android:layout_width="match_parent"
+                    android:padding="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:lineSpacingExtra="2.5sp"
+                        android:text="@string/grand_total"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/txt_grand_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/roboto_medium"
+                        android:lineSpacingExtra="2.5sp"
+                        android:text="20 AED"
+                        android:textColor="@color/orange_a"
+                        android:textSize="18sp" />
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llAddress">
+
+            <TextView
+                android:id="@+id/tvPaymentModeLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/select_payment_mode"
+                android:textAllCaps="false"
+                android:textColor="@color/grey_6"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_payment_mode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPaymentModeLabel"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnPlaceOrder"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/margin5x3"
+        android:background="@drawable/rounded_corners_app_pink_button_bg"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/place_order"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="19sp" />
+
+</RelativeLayout>

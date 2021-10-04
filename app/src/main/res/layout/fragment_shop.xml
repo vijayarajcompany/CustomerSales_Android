@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:overScrollMode="never"
+
+    android:orientation="vertical"
+    >
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rlSort"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/rlDivider"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <ImageView
+            android:src="@drawable/sort"
+            android:id="@+id/imgSort"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            android:background="@android:color/white"
+            />
+        <TextView
+            android:layout_toRightOf="@id/imgSort"
+            android:id="@+id/tvSort"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:fontFamily="@font/roboto_regular"
+            android:textSize="12sp"
+            android:layout_marginStart="10dp"
+            android:text="@string/sort"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:id="@+id/tvSortSelection"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:fontFamily="@font/roboto_regular"
+            android:textSize="12sp"
+            android:layout_marginStart="10dp"
+            android:layout_toRightOf="@id/tvSort"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:text="@string/sort"
+            tools:ignore="HardcodedText" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlDivider"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:text="Text2"
+
+        app:layout_constraintEnd_toStartOf="@+id/tvFilter"
+        app:layout_constraintStart_toEndOf="@+id/rlSort"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" >
+        <View
+            android:layout_width="1dp"
+            android:layout_centerInParent="true"
+            android:layout_height="50dp"
+            android:background="@color/grey"
+            android:gravity="center_horizontal"
+            android:text="Text2"
+            tools:ignore="HardcodedText" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/tvFilter"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rlDivider"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        <ImageView
+            android:src="@drawable/filter"
+            android:id="@+id/imgFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:layout_toRightOf="@id/imgFilter"
+            android:text="@string/filter"
+            android:fontFamily="@font/roboto_regular"
+            android:textSize="12sp"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/black"
+            tools:ignore="HardcodedText" />
+
+
+    </RelativeLayout>
+    <View
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlSort"
+        android:id="@+id/view"
+        android:background="@color/grey"
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:scrollbars="none"
+        android:paddingBottom="10dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

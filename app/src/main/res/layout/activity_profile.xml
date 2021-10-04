@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_custom_tool_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <RelativeLayout
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_horizontal">
+
+
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/img_profile"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="@dimen/activity_padding"
+                        android:layout_marginBottom="@dimen/activity_padding"
+                        fresco:placeholderImage="@drawable/ic_launcher"
+                        fresco:roundAsCircle="true"
+                        fresco:roundWithOverlayColor="@color/white"
+                        fresco:roundedCornerRadius="60dp"
+                        fresco:roundingBorderColor="@color/white"
+                        fresco:roundingBorderWidth="5dp" />
+
+                    <RelativeLayout
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignBottom="@id/img_profile"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/pink_circular_back">
+
+                        <ImageView
+                            android:id="@+id/img_plus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_edit" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/imgSort"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="@string/full_name"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/et_Profile_Name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/roboto_regular"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingBottom="20dp"
+                    android:scrollHorizontally="true"
+                    android:text="text"
+                    android:textColor="@color/grey_15"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/imgSort"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="@string/email_id"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/et_profile_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/roboto_regular"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingBottom="20dp"
+                    android:scrollHorizontally="true"
+                    android:text="text"
+                    android:textColor="@color/grey_15"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/imgSort"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="@string/ern_number"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/er_profile_ern_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/roboto_regular"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingBottom="20dp"
+                    android:scrollHorizontally="true"
+                    android:text="text"
+                    android:textColor="@color/grey_15"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_toRightOf="@id/imgSort"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="@string/date_of_joining"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/et_profile_date_of_joining"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/roboto_regular"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:paddingBottom="20dp"
+                    android:scrollHorizontally="true"
+                    android:text="text"
+                    android:textColor="@color/grey_15"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <include layout="@layout/change_password" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

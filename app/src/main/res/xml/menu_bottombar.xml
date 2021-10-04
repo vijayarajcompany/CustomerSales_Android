@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        icon="@drawable/home_unselected"
+        id="@+id/navigation_home"
+        title="@string/title_home"
+        />
+    <tab
+        icon="@drawable/shop"
+        id="@+id/navigation_shop"
+        title="@string/shop"
+        />
+    <tab
+        icon="@drawable/orders"
+        id="@+id/navigation_orders"
+        title="@string/orders"
+        />
+    <tab
+        icon="@drawable/more"
+        id="@+id/navigation_more"
+        title="@string/more"
+        />
+
+</tabs>

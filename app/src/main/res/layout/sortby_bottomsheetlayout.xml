@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:orientation="vertical"
+
+    >
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/llSortOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/margin5x4">
+
+        <TextView
+            android:id="@+id/size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
+            android:text="@string/sort_by"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_marginTop="18dp"
+            android:background="@color/grey_4"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <RadioButton
+                android:layout_marginTop="5dp"
+                android:id="@+id/radioPopularity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:buttonTint="@color/pink"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/Popularity"
+                android:visibility="gone"
+                android:textColor="@color/pink"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:tag="desc"
+                android:layout_marginTop="5dp"
+                android:id="@+id/radioPrice_high_low"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:buttonTint="@color/pink"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/price_high_low"
+                android:textColor="@color/pink"
+                android:textSize="14sp" />
+
+            <RadioButton
+                android:tag="asc"
+                android:layout_marginTop="5dp"
+                android:id="@+id/radioPrice_low_high"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:buttonTint="@color/pink"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/price_low_high"
+                android:textColor="@color/pink"
+                android:textSize="14sp"
+
+                />
+
+            <RadioButton
+                android:tag="atoz"
+                android:layout_marginTop="5dp"
+                android:id="@+id/radioRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:buttonTint="@color/pink"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/atoz"
+                android:textColor="@color/pink"
+                android:textSize="14sp"
+
+                />
+
+            <RadioButton
+                android:layout_marginTop="5dp"
+                android:id="@+id/radioPromotions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:buttonTint="@color/pink"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/ztoa"
+                android:tag="ztoa"
+
+                android:textColor="@color/pink"
+                android:textSize="14sp"
+
+                />
+
+        </RadioGroup>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/llSortOption"
+        android:layout_marginTop="@dimen/margin5x6"
+        android:background="@drawable/rounded_corners_app_white_button_bg"
+        android:fontFamily="@font/roboto_regular"
+        android:text="@string/cancel"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="19sp" />
+
+</LinearLayout>

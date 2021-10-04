@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.productDetail.ProductDetailActivity">
+
+    <include layout="@layout/app_custom_tool_bar" />
+
+    <ScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/toolbar_height"
+        android:layout_marginBottom="57dp"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="56dp"
+            android:padding="10dp"
+            tools:context=".ui.productDetail.ProductDetailActivity">
+
+<!--
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/ivProductFull"
+                android:layout_width="245dp"
+                android:layout_height="353dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pepsi"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+-->
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:src="@drawable/pepsi"
+                android:id="@+id/ivProductFull"
+                app:layout_constraintDimensionRatio="1:1"
+                android:adjustViewBounds="true"
+                android:layout_width="0dp"
+                android:layout_height="353dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_products_images"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="20dp"
+                android:scrollbars="none"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivProductFull" />
+
+            <View
+                android:id="@+id/view_divider"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:background="@color/grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rv_products_images" />
+
+            <TextView
+                android:id="@+id/tv_product_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:maxLines="2"
+                android:text="The Classic Pepsi"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_divider" />
+
+            <TextView
+                android:id="@+id/tv_product_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:maxLines="2"
+                android:paddingStart="5dp"
+                android:text="200 ML"
+                android:visibility="gone"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="11sp"
+                app:layout_constraintStart_toEndOf="@+id/tv_product_name"
+                app:layout_constraintTop_toBottomOf="@+id/view_divider" />
+
+            <ImageView
+                android:id="@+id/ivProductStock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:visibility="gone"
+                android:src="@drawable/stock_tick"
+                app:layout_constraintStart_toEndOf="@+id/tv_product_quantity"
+                app:layout_constraintTop_toBottomOf="@+id/view_divider" />
+
+            <TextView
+                android:id="@+id/tv_in_stock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/roboto_light"
+                android:gravity="center"
+                android:text="@string/in_stock"
+                android:textAllCaps="false"
+                android:visibility="gone"
+                android:textColor="@color/green"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/ivProductStock"
+                app:layout_constraintTop_toBottomOf="@+id/view_divider" />
+
+            <TextView
+                android:id="@+id/tv_product_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/roboto_regular"
+                android:lineSpacingExtra="3.4sp"
+                android:maxLines="1"
+                android:text="Magnam non asperiores tempore sequi sunt. Consectetur excepturi quia libero nisi enim maxime quas. Repudiandae dolorem suscipit enim explicabo aspernatur recusandae."
+                android:textAllCaps="false"
+                android:textColor="@color/grey9"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_product_name" />
+
+            <TextView
+                android:id="@+id/tv_choose_pack_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:maxLines="1"
+                android:visibility="gone"
+                android:text="Choose Pack Size"
+                android:textAllCaps="false"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_product_desc" />
+
+            <LinearLayout
+                android:id="@+id/ll_packs"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_choose_pack_size">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_packs_product_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:scrollbars="none"
+                    android:layout_marginEnd="5dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvPriceType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:text="@string/price_type"
+
+                android:textColor="@color/blue1"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ll_packs"
+                app:layout_constraintTop_toBottomOf="@id/tv_choose_pack_size" />
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/roboto_medium"
+                android:gravity="center"
+                android:text="4.20"
+                android:textColor="@color/blue1"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@id/tvPriceType"
+                app:layout_constraintTop_toBottomOf="@id/tv_choose_pack_size" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="center"
+                android:text="@string/per_can"
+                android:visibility="gone"
+                android:textColor="@color/grey_4"
+                android:textSize="10sp"
+                app:layout_constraintStart_toEndOf="@id/tv_price"
+                app:layout_constraintTop_toBottomOf="@id/tv_choose_pack_size" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rlAddToCart"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@color/pink"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/rlDivider"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imgSort"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+
+            android:paddingEnd="20dp"
+            android:src="@drawable/cart_white" />
+
+        <TextView
+            android:id="@+id/tvAddToCart"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:paddingStart="20dp"
+            android:text="@string/add_to_cart"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            tools:ignore="HardcodedText" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlDivider"
+        android:layout_width="1dp"
+        android:layout_height="50dp"
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:text="Text2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/rlBuyNow"
+        app:layout_constraintStart_toEndOf="@+id/rlAddToCart"
+        tools:ignore="HardcodedText">
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:background="@color/grey"
+            android:gravity="center_horizontal"
+            android:text="Text2"
+            tools:ignore="HardcodedText" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlBuyNow"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@color/blue1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rlDivider">
+
+        <ImageView
+            android:id="@+id/imgFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:paddingEnd="20dp"
+            android:src="@drawable/right_arrow_white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:fontFamily="@font/roboto_regular"
+            android:gravity="center"
+            android:paddingStart="20dp"
+            android:text="@string/buy_now"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            tools:ignore="HardcodedText" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:background="@color/grey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlAddToCart" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

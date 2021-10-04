@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:paddingTop="20dp">
+
+        <TextView
+            android:id="@+id/txt_coupon_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/roboto_bold"
+            android:lineSpacingExtra="2.5sp"
+            android:text="@string/total_item"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/txt_apply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/roboto_bold"
+            android:lineSpacingExtra="2.5sp"
+            android:text="@string/apply"
+            android:textAllCaps="true"
+            android:textColor="@color/pink"
+            android:textSize="13sp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp">
+
+        <TextView
+            android:id="@+id/txt_coupon_offer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/roboto_regular"
+            android:lineSpacingExtra="2.5sp"
+            android:text="Get 10% of your transaction."
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/txt_charges"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/roboto_light"
+            android:lineSpacingExtra="2.5sp"
+            android:text="65"
+            android:textColor="@color/black"
+            android:textSize="12.5sp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:paddingBottom="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/roboto_light"
+            android:lineSpacingExtra="2.5sp"
+            android:text="@string/expires_on"
+            android:textColor="@color/black"
+            android:textSize="12.5sp" />
+
+        <TextView
+            android:id="@+id/txt_expiry_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/roboto_light"
+            android:lineSpacingExtra="2.5sp"
+            android:text="65"
+            android:textColor="@color/black"
+            android:textSize="12.5sp" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

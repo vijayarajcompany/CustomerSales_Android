@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="Gradle: org.jetbrains.anko:platform-base:0.10.8@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/184748b3b4babffd67483e51d035ac93/platform-base-0.10.8/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d73a0bbc1dc1d30aa2019b82714e2ed1/jetified-platform-base-0.10.8/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/22a101b26b462f3f43ae7eae2f789519/jetified-platform-base-0.10.8/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/5f6f3320604c2a2cc0572e46b5034252/transformed/jetified-platform-base-0.10.8/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4963152acc0b3cd3eaa315eedf0a7f5a/transformed/jetified-platform-base-0.10.8/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/22a101b26b462f3f43ae7eae2f789519/jetified-platform-base-0.10.8/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/22a101b26b462f3f43ae7eae2f789519/jetified-platform-base-0.10.8/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.anko/platform-base/0.10.8/841013cadd306eaf8e9e926bbcca7d0e20065f57/platform-base-0.10.8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

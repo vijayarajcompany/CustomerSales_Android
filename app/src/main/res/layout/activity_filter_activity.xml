@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_custom_tool_bar_filter"/>
+
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:id="@+id/filter_navigator_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal"
+        android:layout_margin="2dp">
+
+        <Button
+            android:layout_width="match_parent"
+            android:id="@+id/btn_filter"
+            android:layout_height="43dp"
+            android:textAllCaps="false"
+            android:text="@string/txt_apply"
+            android:textColor="@color/white"
+            android:textSize="19sp"
+            android:fontFamily="@font/roboto_regular"
+            android:background="@drawable/rounded_corners_app_pink_button_bg"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/toolbar_height"
+        android:layout_marginBottom="50dp"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/filter_dialog_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/grey_4"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/filter_value_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:layout_weight="0.3"
+            />
+
+        <RelativeLayout
+            android:id="@+id/rlRange"
+            android:layout_marginTop="20dp"
+            android:layout_weight="0.3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tvselectRange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/roboto_light"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:text="@string/select_price_range"
+                />
+
+
+            <TextView
+                android:layout_marginTop="50dp"
+                android:id="@+id/rangeBarLeftValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:text="dahfb"
+                />
+            <TextView
+                android:layout_marginTop="50dp"
+                android:fontFamily="@font/roboto_medium"
+                android:id="@+id/rangeBarRightValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="21dp"
+                android:layout_alignParentRight="true"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:layout_marginEnd="20dp"
+                android:text="dahfb"
+                />
+
+            <com.stfalcon.pricerangebar.RangeBarWithChart
+                android:id="@+id/rangeBar"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="21dp"
+                app:barActiveLineColor="@color/pink"
+                app:barActiveThumbColor="@color/pink"
+                app:barChartUnSelectedLineColor="@color/white"
+                app:barChartUnselectedBackgroundColor="@color/white"
+                app:barChartSelectedBackgroundColor="@color/white"
+                app:barChartSelectedLineColor="@color/white"
+                app:barThumbColor="@color/pink"
+                app:barLineColor="@color/grey_4"
+                android:layout_marginEnd="21dp"
+                android:layout_marginBottom="16dp"
+                />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

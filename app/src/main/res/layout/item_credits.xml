@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/divider_color_school"
+    android:paddingBottom="10dp"
+    android:orientation="horizontal">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="20dp"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/txt_credits_limit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/current"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_below="@id/txt_credits_limit"
+            android:id="@+id/txt_credits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/Limit"
+            android:textColor="@color/black"
+            android:textSize="17sp" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        >
+
+        <TextView
+            android:id="@+id/txt_credits_aed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/roboto_light"
+            android:text="@string/aed"
+            android:textAllCaps="true"
+            android:textColor="@color/pink"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/txt_credits_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/roboto_medium"
+            android:text="1024.00"
+            android:textColor="@color/pink"
+            android:textSize="17sp" />
+
+
+    </LinearLayout>
+</RelativeLayout>
+</RelativeLayout>
