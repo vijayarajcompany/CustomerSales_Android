@@ -1,8 +1,6 @@
 package com.pepsidrc.ui.profile
 
-import android.annotation.TargetApi
 import android.app.Activity
-import android.content.ContentUris
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
@@ -12,10 +10,8 @@ import android.graphics.BitmapFactory
 import android.media.MediaScannerConnection
 import android.net.Uri
 import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Environment
-import android.provider.DocumentsContract
 import android.provider.MediaStore
 import android.text.TextUtils
 import android.util.Log
@@ -32,9 +28,6 @@ import com.pepsidrc.R
 import com.pepsidrc.base.BaseActivity
 import com.pepsidrc.managers.ImageRequestManager
 import com.pepsidrc.model.profile.UserDetailResponse
-import com.pepsidrc.ui.navigation.LandingNavigationActivity
-import com.pepsidrc.ui.signup.ActivitySignUp
-import com.pepsidrc.ui.signup.SignUpViewModel
 import com.pepsidrc.utils.AndroidUtils
 import com.pepsidrc.utils.Logger
 import com.pepsidrc.utils.NetworkUtil

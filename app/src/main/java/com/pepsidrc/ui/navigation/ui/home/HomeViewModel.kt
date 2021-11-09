@@ -159,6 +159,7 @@ class HomeViewModel(
                     updatedivisionModel.value = it
 
                     val Division_event = AdjustEvent("ujegfy")
+                    Division_event.setCallbackId("Division_event");
                     Division_event.addCallbackParameter("Division",  division);
                     Adjust.trackEvent(Division_event)
 

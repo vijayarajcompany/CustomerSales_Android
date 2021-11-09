@@ -43,6 +43,12 @@ class LoginActivity : BaseActivity<LoginViewModel>(LoginViewModel::class) {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        etUsername.setText("vijayaraj.suyambu@pepsidrc.ae");
+        etPassword.setText("pepsi@123");
+
+
+
         tvForgot.setOnClickListener { doResetPassword() }
         tvnewUserSignUp.setOnClickListener { }
         btnLogin.setOnClickListener { doSignIn() }

@@ -39,13 +39,15 @@ android {
             versionCode 1
             versionName "0.0.0"
             applicationIdSuffix ".staging"
-            buildConfigField('String', 'BASE_URL', '"http://10.100.61.14:3000"')
+            buildConfigField('String', 'BASE_URL', '"http://drccustsales.pepsidrc.ae:3000/"')
+//            buildConfigField('String', 'BASE_URL', '"http://10.100.61.14:3000"')
 //            buildConfigField('String', 'BASE_URL', '"http://139.59.55.24"')
 //          buildConfigField('String', 'BASE_URL', '"http://localhost:3000"')
         }
 
         production {
-            buildConfigField('String', 'BASE_URL', '"http://10.100.61.14:3000"')
+            buildConfigField('String', 'BASE_URL', '"http://drccustsales.pepsidrc.ae:3000/"')
+//            buildConfigField('String', 'BASE_URL', '"http://10.100.61.14:3000"')
 //            buildConfigField('String', 'BASE_URL', '"http://139.59.55.24"')
 //          buildConfigField('String', 'BASE_URL', '"http://localhost:3000"')
         }

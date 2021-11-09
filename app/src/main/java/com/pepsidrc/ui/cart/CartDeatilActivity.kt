@@ -78,10 +78,19 @@ class CartDeatilActivity : BaseActivity<CartViewModel>(CartViewModel::class),
 
                 let {
                     isDelete = false
+
+                    val CartPg_Add_Qty_event = AdjustEvent("66ltl8")
+                    CartPg_Add_Qty_event.setCallbackId("CartPg_Add_Qty_event");
+                    Adjust.trackEvent(CartPg_Add_Qty_event)
+
                     addProductToCart(objectAtPosition, objectAtPosition.quantity + 1, 0)
                 }
             }
             Config.AdapterClickViewTypes.CLICK_VIEW_MINUS_PRODUCT -> {
+
+                val CartPg_Remove_Qty_event = AdjustEvent("ck0r1o")
+                CartPg_Remove_Qty_event.setCallbackId("CartPg_Remove_Qty_event");
+                Adjust.trackEvent(CartPg_Remove_Qty_event)
 
                 let {
                     UiUtils.hideSoftKeyboard(it)
@@ -104,11 +113,11 @@ class CartDeatilActivity : BaseActivity<CartViewModel>(CartViewModel::class),
                         isDelete = false
 
                         addProductToCart(objectAtPosition, objectAtPosition.quantity, 0)
+
                     } else {
                         isDelete = true
 
                         addProductToCart(objectAtPosition, objectAtPosition.quantity, 1)
-
                     }
                 }
             }
@@ -117,6 +126,11 @@ class CartDeatilActivity : BaseActivity<CartViewModel>(CartViewModel::class),
                 let {
                     UiUtils.hideSoftKeyboard(it)
                     isDelete = true
+
+                    val CartPg_Delete_Product_event = AdjustEvent("939v0d")
+                    CartPg_Delete_Product_event.setCallbackId("CartPg_Delete_Product_event");
+                    Adjust.trackEvent(CartPg_Delete_Product_event)
+
                     addProductToCart(objectAtPosition, objectAtPosition.quantity - 1, 1)
 
                 }
@@ -178,6 +192,7 @@ class CartDeatilActivity : BaseActivity<CartViewModel>(CartViewModel::class),
         rlBuyNow.setOnClickListener {
             // getModes()
             val ShopPg_BuyNow_event = AdjustEvent("qc39zd")
+            ShopPg_BuyNow_event.setCallbackId("ShopPg_BuyNow_event");
             Adjust.trackEvent(ShopPg_BuyNow_event)
 
             order?.totalAmount?.let {
@@ -199,6 +214,7 @@ class CartDeatilActivity : BaseActivity<CartViewModel>(CartViewModel::class),
         }
         rlShopMore.setOnClickListener {
             val ShopMore_event = AdjustEvent("22v98a")
+            ShopMore_event.setCallbackId("ShopMore_event");
             Adjust.trackEvent(ShopMore_event)
 
             startActivity(LandingNavigationActivity.getIntent(this, 2))
@@ -481,6 +497,7 @@ class CartDeatilActivity : BaseActivity<CartViewModel>(CartViewModel::class),
     fun addProductToCart(objectAtPosition: OrderItemsItem, quantity: Int, isDelete: Int) {
 
         val ShopPg_AddToCart_event = AdjustEvent("lmxnag")
+        ShopPg_AddToCart_event.setCallbackId("ShopPg_AddToCart_event");
         Adjust.trackEvent(ShopPg_AddToCart_event)
 
         if (NetworkUtil.isInternetAvailable(this)) {

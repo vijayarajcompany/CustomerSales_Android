@@ -49,6 +49,7 @@ class SignUpViewModel(private val signUpRepository: SignUpRepository, private va
 //                    val formattedDate2 = current.format(formatter2)
 
                     val SignUp_Success_event = AdjustEvent("9ghat9")
+                    SignUp_Success_event.setCallbackId("SignUp_Success_event");
                     SignUp_Success_event.addCallbackParameter("NewUser_Name", name);
                     SignUp_Success_event.addCallbackParameter("NewUser_Email", email);
                     Adjust.trackEvent(SignUp_Success_event)

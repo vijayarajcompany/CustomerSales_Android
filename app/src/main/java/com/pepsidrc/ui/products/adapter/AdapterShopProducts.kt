@@ -14,19 +14,15 @@ import com.pepsidrc.base.StoreProducts
 import com.pepsidrc.callbacks.AdapterViewClickListener
 import com.pepsidrc.callbacks.AdapterViewPacksClickListener
 import com.pepsidrc.managers.ImageRequestManager
-import com.pepsidrc.model.categories.CategoriesItem
-import com.pepsidrc.model.home.Product
 import com.pepsidrc.model.product.ItemMastersItem
 import com.pepsidrc.model.product.PacksItem
-import com.pepsidrc.ui.navigation.ui.home.adapter.AdapterCategoryCallback
 import com.pepsidrc.ui.navigation.ui.home.adapter.AdapterShopProductsCallback
 import com.pepsidrc.utils.AndroidUtils
 import com.pepsidrc.utils.Config
-import kotlinx.android.synthetic.main.activity_product_detail.*
-import kotlinx.android.synthetic.main.item_pack.view.*
 import kotlinx.android.synthetic.main.item_product.view.*
+import kotlinx.android.synthetic.main.item_product.view.tv_product_name
+import kotlinx.android.synthetic.main.item_sub_category.view.*
 import org.jetbrains.anko.backgroundColor
-import org.jetbrains.anko.backgroundDrawable
 import org.jetbrains.anko.backgroundResource
 
 class AdapterShopProducts(
@@ -93,10 +89,50 @@ class AdapterShopProducts(
 
             product?.images?.let {
             if(it?.size>0) {
-                ImageRequestManager.with(itemView.ivProduct)
-                    .url(it?.get(0)?.avatar_url)
-                    .setScaleType(ScalingUtils.ScaleType.FIT_CENTER)
-                    .build()
+
+
+//                ImageRequestManager.with(itemView.ivProduct)
+//                    .url(it?.get(0)?.avatar_url)
+//                    .setScaleType(ScalingUtils.ScaleType.FIT_CENTER)
+//                    .build()
+
+
+
+                var imageName =  product?.name
+                imageName = imageName?.replace( "%20" , "_");
+                imageName = imageName?.replace( " " , "_");
+
+                try {
+                    val res: Class<*> = R.drawable::class.java
+                    val field = res.getField(imageName?.toLowerCase())
+                    val drawableId: Int = field.getInt(null)
+
+                    ImageRequestManager.with(itemView.ivProduct)
+                        .setPlaceholderImage(drawableId)
+                        .setScaleType(ScalingUtils.ScaleType.FIT_CENTER)
+                        .build()
+                }
+                catch (e:Exception) {
+                    ImageRequestManager.with(itemView.ivProduct)
+                        .setPlaceholderImage(R.drawable.no_image_icon)
+                        .setScaleType(ScalingUtils.ScaleType.FIT_CENTER)
+                        .build()
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             }
             else{
                 ImageRequestManager.with(itemView.ivProduct)
@@ -104,6 +140,14 @@ class AdapterShopProducts(
                     .setScaleType(ScalingUtils.ScaleType.FIT_CENTER)
                     .build()
             }
+
+
+
+
+
+
+
+
             }
             var manager = LinearLayoutManager(
                 activity,

@@ -99,6 +99,7 @@ class HomeFragment : BaseFragment<HomeViewModel>(HomeViewModel::class),
                     cat_name = objectAtPosition.name
 
                     val CategoryPg_Category_Tapped_event = AdjustEvent("yytyko")
+                    CategoryPg_Category_Tapped_event.setCallbackId("CategoryPg_Category_Tapped_event");
                     CategoryPg_Category_Tapped_event.addCallbackParameter("CategoryPg_CategoryID_Tapped", cat_id.toString());
                     CategoryPg_Category_Tapped_event.addCallbackParameter("CategoryPg_CategoryName_Tapped", cat_name);
 
@@ -166,6 +167,8 @@ class HomeFragment : BaseFragment<HomeViewModel>(HomeViewModel::class),
         }
         btnViewMore.setOnClickListener {
             val ViewMore_event = AdjustEvent("x268zt")
+            ViewMore_event.setCallbackId("ViewMore_event");
+            ViewMore_event.addCallbackParameter("NewUser_Name", "name");
             Adjust.trackEvent(ViewMore_event)
             (activity as LandingNavigationActivity).switchTabShop()
 

@@ -30,6 +30,7 @@ class FAQActivity : AppCompatActivity() {
         barIcons.visibility = View.GONE
 
         val MorePg_FAQ_link_event = AdjustEvent("nha3ey")
+        MorePg_FAQ_link_event.setCallbackId("MorePg_FAQ_link_event");
         Adjust.trackEvent(MorePg_FAQ_link_event)
 
     }

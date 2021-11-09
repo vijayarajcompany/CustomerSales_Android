@@ -16,8 +16,6 @@ import kotlinx.android.synthetic.main.payment_option_dialog.*
 class PaymentModeDialog(var activity: Activity, var payment_modeDialogListener: PaymentModeDialogListener, internal var adapter: RecyclerView.Adapter<*>) : Dialog(activity),
     View.OnClickListener{
 
-
-
     var dialog: Dialog? = null
 
     internal var recyclerView: RecyclerView? = null
@@ -43,9 +41,8 @@ class PaymentModeDialog(var activity: Activity, var payment_modeDialogListener: 
             R.id.btnPlaceOrder -> {
 
                 val OrderPg_PlaceOrder_event = AdjustEvent("va0e37")
+                OrderPg_PlaceOrder_event.setCallbackId("OrderPg_PlaceOrder_event");
                 Adjust.trackEvent(OrderPg_PlaceOrder_event)
-
-
                 /*(activity as LandingNavigationActivity).pushFragment(
                     SubcategoriesFragment.getInstance())*/
                     payment_modeDialogListener.placeOrder()

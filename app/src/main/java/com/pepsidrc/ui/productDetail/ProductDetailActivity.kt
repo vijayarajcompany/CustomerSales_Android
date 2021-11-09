@@ -3,8 +3,10 @@ package com.pepsidrc.ui.productDetail
 import android.app.ActivityOptions
 import android.content.Context
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
 import android.view.View
+import androidx.annotation.RequiresApi
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.facebook.drawee.drawable.ScalingUtils
@@ -34,6 +36,7 @@ import org.jetbrains.anko.backgroundColor
 
 import com.adjust.sdk.Adjust
 import com.adjust.sdk.AdjustEvent
+import kotlinx.android.synthetic.main.item_product.view.*
 
 class ProductDetailActivity :
     BaseActivity<ProductsDetailViewModel>(ProductsDetailViewModel::class),
@@ -100,6 +103,7 @@ class ProductDetailActivity :
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
+    @RequiresApi(Build.VERSION_CODES.LOLLIPOP)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         preferenceManager = PreferenceManager(this)
@@ -145,6 +149,7 @@ class ProductDetailActivity :
         rlBuyNow.setOnClickListener {
 
             val MorePg_Logout_link_event = AdjustEvent("mjn6qw")
+            MorePg_Logout_link_event.setCallbackId("MorePg_Logout_link_event");
             Adjust.trackEvent(MorePg_Logout_link_event)
 
 
@@ -172,6 +177,7 @@ class ProductDetailActivity :
    //     var i = 0
   //      var isPackSelected = false
         val ProductDetailPg_AddToCart_Btn_event = AdjustEvent("7cw84a")
+        ProductDetailPg_AddToCart_Btn_event.setCallbackId("ProductDetailPg_AddToCart_Btn_event");
         Adjust.trackEvent(ProductDetailPg_AddToCart_Btn_event)
 
         val productList = listOf(
@@ -307,6 +313,30 @@ class ProductDetailActivity :
                     .url(it.get(0)?.avatar_url)
                     .setScaleType(ScalingUtils.ScaleType.FIT_CENTER)
                     .build()
+
+//              var imageName =  product?.name
+                var imageName =  ""
+                imageName = imageName?.replace( "%20" , "_");
+                imageName = imageName?.replace( " " , "_");
+
+                try {
+                    val res: Class<*> = R.drawable::class.java
+                    val field = res.getField(imageName?.toLowerCase())
+                    val drawableId: Int = field.getInt(null)
+
+                    ImageRequestManager.with(ivProductFull)
+                        .setPlaceholderImage(drawableId)
+                        .setScaleType(ScalingUtils.ScaleType.FIT_CENTER)
+                        .build()
+                }
+                catch (e:Exception) {
+                    ImageRequestManager.with(ivProductFull)
+                        .setPlaceholderImage(R.drawable.no_image_icon)
+                        .setScaleType(ScalingUtils.ScaleType.FIT_CENTER)
+                        .build()
+                }
+
+
             } else {
                 ImageRequestManager.with(ivProductFull)
                     .setPlaceholderImage(R.drawable.no_image_icon)

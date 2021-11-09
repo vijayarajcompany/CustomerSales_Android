@@ -56,6 +56,7 @@ class AdapterCategories(
                 .build()
             itemView.setOnClickListener {
                 val ShopPg_Category_Tapped_event = AdjustEvent("8gg879")
+                ShopPg_Category_Tapped_event.setCallbackId("ShopPg_Category_Tapped_event");
                 Adjust.trackEvent(ShopPg_Category_Tapped_event)
 
                 adapterViewClick?.onClickAdapterView(

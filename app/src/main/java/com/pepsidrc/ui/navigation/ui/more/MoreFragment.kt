@@ -146,6 +146,7 @@ class MoreFragment : BaseFragment<MoreViewModel>(MoreViewModel::class),
 
     private fun showProfile() {
         val MorePg_Profile_link_event = AdjustEvent("gnzrgt")
+        MorePg_Profile_link_event.setCallbackId("MorePg_Profile_link_event");
         Adjust.trackEvent(MorePg_Profile_link_event)
 
         activity.let {

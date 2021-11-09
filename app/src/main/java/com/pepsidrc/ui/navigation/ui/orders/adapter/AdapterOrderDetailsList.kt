@@ -7,27 +7,14 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.facebook.drawee.drawable.ScalingUtils
-import com.pepsidrc.BuildConfig
 
 import com.pepsidrc.R
-import com.pepsidrc.callbacks.AdapterViewClickListener
 import com.pepsidrc.managers.ImageRequestManager
-import com.pepsidrc.model.categories.CategoriesItem
-import com.pepsidrc.model.home.Product
 import com.pepsidrc.model.orderlist.OrderItemsItem
-import com.pepsidrc.model.orderlist.OrderListResponsePayload
-import com.pepsidrc.model.orderlist.OrdersItem
-import com.pepsidrc.ui.navigation.ui.home.adapter.AdapterCategoryCallback
 import com.pepsidrc.ui.navigation.ui.home.adapter.AdapterOrderDetailsListCallback
-import com.pepsidrc.ui.navigation.ui.home.adapter.AdapterOrderListCallback
-import com.pepsidrc.ui.navigation.ui.home.adapter.AdapterShopProductsCallback
 import com.pepsidrc.utils.AndroidUtils
-import com.pepsidrc.utils.Config
-import kotlinx.android.synthetic.main.item_category_home.view.*
 import kotlinx.android.synthetic.main.item_category_home.view.imgSource
-import kotlinx.android.synthetic.main.item_orders.view.*
 import kotlinx.android.synthetic.main.item_orders_detail.view.*
-import kotlinx.android.synthetic.main.item_product.view.*
 
 class AdapterOrderDetailsList(
     val activity: Activity

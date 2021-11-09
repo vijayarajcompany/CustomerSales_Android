@@ -5,8 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
-import android.widget.TextView
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.facebook.drawee.drawable.ScalingUtils
@@ -14,17 +12,9 @@ import com.pepsidrc.util.UiUtils
 
 import com.pepsidrc.R
 import com.pepsidrc.callbacks.AdapterViewClickListener
-import com.pepsidrc.callbacks.AdapterViewPacksClickListener
 import com.pepsidrc.managers.ImageRequestManager
 import com.pepsidrc.model.cart.cartItems.OrderItemsItem
-import com.pepsidrc.model.categories.CategoriesItem
-import com.pepsidrc.model.home.Product
-import com.pepsidrc.model.product.ItemMastersItem
-import com.pepsidrc.model.product.PacksItem
 import com.pepsidrc.ui.navigation.ui.home.adapter.AdapterCartListProductsCallback
-import com.pepsidrc.ui.navigation.ui.home.adapter.AdapterCategoryCallback
-import com.pepsidrc.ui.navigation.ui.home.adapter.AdapterShopProductsCallback
-import com.pepsidrc.ui.products.adapter.AdapterPacks
 import com.pepsidrc.utils.AndroidUtils
 import com.pepsidrc.utils.Config
 import kotlinx.android.synthetic.main.item_cart.view.*

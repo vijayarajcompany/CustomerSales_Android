@@ -139,6 +139,7 @@ class ProductFragment : BaseFragment<ProductsViewModel>(ProductsViewModel::class
                     UiUtils.hideSoftKeyboard(it)
 
                     val ProductPg_Product_Tapped_event = AdjustEvent("w7j2eh")
+                    ProductPg_Product_Tapped_event.setCallbackId("ProductPg_Product_Tapped_event");
                     ProductPg_Product_Tapped_event.addCallbackParameter("ProductPg_ProductName_Tapped", objectAtPosition.name);
                     ProductPg_Product_Tapped_event.addCallbackParameter("ProductPg_ProductID_Tapped", objectAtPosition.id.toString());
                     Adjust.trackEvent(ProductPg_Product_Tapped_event)
@@ -300,6 +301,7 @@ class ProductFragment : BaseFragment<ProductsViewModel>(ProductsViewModel::class
     //    var isPackSelected = false
 
         val ProductPg_AddToCart_Btn_event = AdjustEvent("69f2l5")
+        ProductPg_AddToCart_Btn_event.setCallbackId("ProductPg_AddToCart_Btn_event");
         ProductPg_AddToCart_Btn_event.addCallbackParameter("ProductPg_AddToCart_Tapped_ID", objectAtPosition.name);
         Adjust.trackEvent(ProductPg_AddToCart_Btn_event)
 

@@ -125,6 +125,7 @@ class SearchActivity : BaseActivity<SearchViewModel>(SearchViewModel::class),
         super.onCreate(savedInstanceState)
 
         val SearchPg_event = AdjustEvent("86exm3")
+        SearchPg_event.setCallbackId("SearchPg_event");
         Adjust.trackEvent(SearchPg_event)
 
         val manager = GridLayoutManager(this, 2)

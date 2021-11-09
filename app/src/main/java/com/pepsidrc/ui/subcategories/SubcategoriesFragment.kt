@@ -33,6 +33,7 @@ class SubcategoriesFragment : BaseFragment<SubCategoriesViewModel>(SubCategories
             Config.AdapterClickViewTypes.CLICK_VIEW_SUB_CATEGORY -> {
 
                 val SubCategoryPg_Category_Tapped_event = AdjustEvent("eu4tvj")
+                SubCategoryPg_Category_Tapped_event.setCallbackId("SubCategoryPg_Category_Tapped_event");
                 SubCategoryPg_Category_Tapped_event.addCallbackParameter("SubCategoryPg_CategoryName_Tapped", objectAtPosition.name);
                 SubCategoryPg_Category_Tapped_event.addCallbackParameter("SubCategoryPg_CategoryID_Tapped", objectAtPosition.id.toString());
                 Adjust.trackEvent(SubCategoryPg_Category_Tapped_event)

@@ -3,6 +3,9 @@
     <domain-config cleartextTrafficPermitted="true">
         <domain includeSubdomains="true">api.github.com</domain>
         <domain includeSubdomains="true">139.59.55.24</domain>
+        <domain includeSubdomains="true">drccustsales.pepsidrc.ae</domain>
+        <domain includeSubdomains="true">10.100.61.14</domain>
         <domain includeSubdomains="true">play.google.com</domain>
+
     </domain-config>
 </network-security-config>

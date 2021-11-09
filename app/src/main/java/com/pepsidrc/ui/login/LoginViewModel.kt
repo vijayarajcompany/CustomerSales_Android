@@ -37,7 +37,8 @@ class LoginViewModel(private val loginRepository: LoginRepository, private val s
                     val fname = it.data.response.user.firstName
                     val lname = it.data.response.user.lastName
 
-                    val SignIn_Success_event = AdjustEvent("kjg3y2")
+                    val SignIn_Success_event = AdjustEvent("kjg3y2");
+                    SignIn_Success_event.setCallbackId("SignIn_Success_event");
                     SignIn_Success_event.addCallbackParameter("Signin_Email", user.email);
                     SignIn_Success_event.addCallbackParameter("Signin_FirstName",fname);
                     SignIn_Success_event.addCallbackParameter("Signin_LastName", lname);

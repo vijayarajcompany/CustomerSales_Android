@@ -11,17 +11,9 @@ import com.facebook.drawee.drawable.ScalingUtils
 import com.pepsidrc.R
 import com.pepsidrc.callbacks.AdapterViewClickListener
 import com.pepsidrc.managers.ImageRequestManager
-import com.pepsidrc.model.categories.CategoriesItem
-import com.pepsidrc.model.home.Product
 import com.pepsidrc.model.product.ImagesItem
-import com.pepsidrc.model.product.ItemMastersItem
-import com.pepsidrc.ui.navigation.ui.home.adapter.AdapterCategoryCallback
 import com.pepsidrc.ui.navigation.ui.home.adapter.AdapterProductsImagesCallback
-import com.pepsidrc.ui.navigation.ui.home.adapter.AdapterShopProductsCallback
-import com.pepsidrc.utils.AndroidUtils
 import com.pepsidrc.utils.Config
-import kotlinx.android.synthetic.main.activity_product_detail.*
-import kotlinx.android.synthetic.main.item_product.view.*
 import kotlinx.android.synthetic.main.item_product_images.view.*
 
 class AdapterProductsImages(
