@@ -300,7 +300,7 @@ class ProductFragment : BaseFragment<ProductsViewModel>(ProductsViewModel::class
     //    var isPackSelected = false
 
         val ProductPg_AddToCart_Btn_event = AdjustEvent("69f2l5")
-        ProductPg_AddToCart_Btn_event.addCallbackParameter("ProductPg_AddToCart_Tapped", objectAtPosition.name);
+        ProductPg_AddToCart_Btn_event.addCallbackParameter("ProductPg_AddToCart_Tapped_ID", objectAtPosition.name);
         Adjust.trackEvent(ProductPg_AddToCart_Btn_event)
 
         if (NetworkUtil.isInternetAvailable(activity)) {
